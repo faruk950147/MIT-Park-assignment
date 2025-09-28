@@ -1,0 +1,128 @@
+🔹 Basic Selectors
+
+Universal Selector
+* {
+  margin: 0;
+  padding: 0;
+}
+👉 সব element সিলেক্ট করে।
+
+Element Selector
+p {
+  color: blue;
+}
+👉 নির্দিষ্ট HTML ট্যাগ (যেমন p, h1, div) সিলেক্ট করে।
+
+Class Selector (. দিয়ে শুরু হয়)
+.btn {
+  background: green;
+}
+👉 class="btn" থাকা element সিলেক্ট করে।
+
+ID Selector (# দিয়ে শুরু হয়)
+#header {
+  background: black;
+}
+👉 id="header" থাকা element সিলেক্ট করে।
+
+
+🔹 Grouping & Combinators
+
+Grouping Selector
+h1, h2, p {
+  font-family: Arial;
+}
+👉 একাধিক element একসাথে style করা যায়।
+
+Descendant Selector (space)
+div p {
+  color: red;
+}
+👉 div এর ভিতরের সব p সিলেক্ট হবে।
+
+Child Selector (>)
+div > p {
+  color: blue;
+}
+👉 শুধু direct child p সিলেক্ট করবে।
+
+Adjacent Sibling Selector (+)
+h1 + p {
+  color: green;
+}
+👉 h1 এর পরের p সিলেক্ট হবে।
+
+General Sibling Selector (~)
+h1 ~ p {
+  color: orange;
+}
+👉 h1 এর পরে থাকা সব p সিলেক্ট হবে।
+
+
+🔹 Attribute Selectors
+
+Attribute Exists
+a[href] {
+  color: blue;
+}
+👉 যেসব a ট্যাগের href আছে।
+
+Attribute Equals
+input[type="text"] {
+  border: 1px solid black;
+}
+👉 type="text" ইনপুটগুলো।
+
+Attribute Starts With (^=)
+a[href^="https"] {
+  color: green;
+}
+👉 যেসব লিংক https দিয়ে শুরু।
+
+Attribute Ends With ($=)
+img[src$=".png"] {
+  border: 2px solid red;
+}
+👉 .png ফাইলগুলো।
+
+Attribute Contains (*=)
+div[class*="box"] {
+  background: yellow;
+}
+👉 class এর মধ্যে box আছে এমন element।
+
+
+🔹 Pseudo-classes
+
+Hover
+a:hover {
+  color: red;
+}
+
+First-child / Last-child
+li:first-child { color: blue; }
+li:last-child { color: green; }
+
+Nth-child
+li:nth-child(2) { color: purple; }
+
+Not selector
+p:not(.intro) {
+  color: gray;
+}
+
+
+🔹 Pseudo-elements
+
+First-line
+p::first-line {
+  font-weight: bold;
+}
+
+Before / After
+h1::before {
+  content: "🔥 ";
+}
+h1::after {
+  content: " 🚀";
+}

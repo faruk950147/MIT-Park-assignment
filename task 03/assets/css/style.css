@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+    --inter-tight: "Inter Tight", sans-serif;
+    --primary-color: #cdef84;
+    --black-color: #121421;
+    --para-color: #707070;
+    --hover-color: #afd449;
+    --scroll-track: #efefef;
+    --scroll-thumb: #dadada;
+    --stroke-color: #e4e6eb;
+    --text-black: #1b1c17;
+    --text-black-10: rgb(27 28 23 / 10%);
+    --text-black-28: rgb(27 28 23 / 28%);
+    --text-black-50: rgb(27 28 23 / 50%);
+    --green: #4cbf4c;
+    --red: #f02e17;
+    --bg-one: #ededed;
+    --border-color: #ededed;
+    --color1: #383838;
+    --color2: #ebe7d5;
+    --color3: #fdedeb;
+    --color4: #f4f4f4;
+    --event-bg: #fbf9f1;
+    --body-bg: #ffffff;
+    --white: #ffffff;
+    --white-10: rgb(255 255 255 / 10%);
+    --white-15: rgb(255 255 255 / 15%);
+    --white-32: rgb(255 255 255 / 32%);
+    --white-80: rgb(255 255 255 / 70%);
+    --black: #000000;
+    --black-5: rgb(0 0 0 / 5%);
+    --black-10: rgb(0 0 0 / 10%);
+}
+/* Reset */
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--inter-tight);
+    background-color: var(--white);
+    color: var(--para-color);
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+}
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.3s ease;
+}
+
+/* ===== Header ===== */
+.header {
+    width: 100%;
+    background: var(--primary-color);
+}
+
+.header .left_content { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 15%;
+    margin-left: 10px;
+}
+.header .center_content .menu {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+}
+.header .center_content .menu li a {
+    font-weight: 500;
+    color: var(--black-color);
+}
+.header .right_content .main_content a {
+    padding: 6px 16px;
+    border-radius: 6px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.header .loginbtn {
+    background-color: var(--black-color);
+    color: var(--white);
+    transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+.header .loginbtn:hover {
+    background-color: transparent;
+    color: var(--black-color); 
+}
+
+.header .joinbtn {
+    border: 1px solid var(--black-color);
+    color: var(--black-color);
+    transition: border-color 1s ease-in-out;
+}
+
+.header .joinbtn:hover {
+    border-color: transparent;
+}
+
+.header .toggle_btn {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--black-color);
+    margin-right: 10px;
+}
+
+/* ===== Mobile Sidebar ===== */
+.mobiles_content {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    max-width: 550px;
+    height: 100%;
+    background: var(--primary-color);
+    padding: 20px;
+    transition: 0.4s ease-in-out;
+    z-index: 1000;
+}
+
+.mobiles_content.active {
+    left: 0;
+}
+
+.mobiles_content .close_btn {
+    text-align: right;
+    font-size: 22px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.mobiles_content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.mobiles_content ul li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black-color);
+}
+.mobiles_content .info_content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    color: var(--black);
+}
+.mobiles_content .down_content .loginbtn {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 15px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    background-color: var(--black-color);
+    color: var(--white);
+}
+.mobiles_content .down_content .joinbtn {
+    border: 1px solid var(--black);
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 15px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--black);
+}

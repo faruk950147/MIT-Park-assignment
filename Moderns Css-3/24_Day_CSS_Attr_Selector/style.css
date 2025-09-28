@@ -1,0 +1,57 @@
+   body {
+      font-family: 'Poppins', sans-serif;
+      margin: 20px;
+    }
+
+    /* all links with target */
+    a[target] {
+      text-decoration: none;
+      color: red;
+    }
+
+    /* only target="_self" */
+    a[target="_self"] {
+      color: plum;
+    }
+
+    /* title starts with Python */
+    a[title^="Python"] {
+      color: aqua;
+      font-weight: bold;
+    }
+
+    /* title ends with automation */
+    a[title$="automation"] {
+      color: purple;
+      font-style: italic;
+    }
+
+    /* title contains Django */
+    a[title*="Django"] {
+      border-bottom: 2px solid black;
+    }
+
+    /* class = child or child-* */
+    div[class|="child"] {
+      width: 300px;
+      height: 80px;
+      background: #8c7ae6;
+      margin-bottom: 5px;
+      padding: 5px;
+      color: #fff;
+    }
+
+    /* class starts with child */
+    div[class^="child"] {
+      background: #e1b12c;
+    }
+
+    /* class ends with ial */
+    div[class$="ial"] {
+      background: #8c7ae6;
+    }
+
+    /* class contains erv */
+    div[class*="erv"] {
+      background: #e84118;
+    }

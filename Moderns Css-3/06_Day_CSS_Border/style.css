@@ -1,0 +1,17 @@
+h1 {
+  /* border-style: hidden;
+  border-width: 10px; */
+  border-color: aquamarine;
+  /* 
+  border: 5px solid red;
+  border-radius: 15px; */
+  border-right: 5px solid rgb(85, 28, 190);
+  border-top: 5px solid rgb(17, 3, 13);
+  border-bottom: 5px solid rgb(168, 218, 94);
+  border-left: 5px solid rgb(134, 65, 19);
+
+  border-left-style: dotted;
+  border-right-style: dashed;
+  border-top-style: double;
+  border-bottom-style: groove;
+}

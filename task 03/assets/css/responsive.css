@@ -1,0 +1,17 @@
+/* Responsive */
+@media(max-width: 991px) {
+
+
+
+
+   
+  .header .center_content {
+     display: none;
+  }
+  .header .right_content {
+     display: none;
+   }
+  .header .toggle_btn {
+        display: block;
+   }
+}

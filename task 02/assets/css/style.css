@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+    --inter-tight: "Inter Tight", sans-serif;
+    --primary-color: #cdef84;
+    --black-color: #121421;
+    --para-color: #707070;
+    --hover-color: #afd449;
+    --scroll-track: #efefef;
+    --scroll-thumb: #dadada;
+    --stroke-color: #e4e6eb;
+    --text-black: #1b1c17;
+    --text-black-10: rgb(27 28 23 / 10%);
+    --text-black-28: rgb(27 28 23 / 28%);
+    --text-black-50: rgb(27 28 23 / 50%);
+    --green: #4cbf4c;
+    --red: #f02e17;
+    --bg-one: #ededed;
+    --border-color: #ededed;
+    --color1: #383838;
+    --color2: #ebe7d5;
+    --color3: #fdedeb;
+    --color4: #f4f4f4;
+    --event-bg: #fbf9f1;
+    --body-bg: #ffffff;
+    --white: #ffffff;
+    --white-10: rgb(255 255 255 / 10%);
+    --white-15: rgb(255 255 255 / 15%);
+    --white-32: rgb(255 255 255 / 32%);
+    --white-80: rgb(255 255 255 / 70%);
+    --black: #000000;
+    --black-5: rgb(0 0 0 / 5%);
+    --black-10: rgb(0 0 0 / 10%);
+}
+/* Reset */
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--inter-tight);
+    background-color: var(--white);
+    color: var(--para-color);
+}
+img {
+    width: 100%;
+    height: auto;
+}
+ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+}
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.3s ease;
+}
+.header .navbar #check {
+     display: none;
+}
+
+.header .navbar .icons {
+    display: none;
+    padding: 8px 10px;
+    border: 1px solid var(--black);
+    cursor: pointer;
+    margin-right: 20px;
+
+}
+
+#header {
+    width: 100%;
+    background-color: var(--primary-color);
+}
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header .navbar .logo {
+    width: 15%;
+}
+
+
+.header .navbar .main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.header .navbar .main-navbar .main-menu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 40px;
+}
+
+.header .navbar .main-navbar .login-join {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}

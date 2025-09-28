@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Transform Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      margin: 0;
+      height: 100vh; /* full height */
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;     /* vertical center */
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    /* ===== Button Example ===== */
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      background: #2563eb;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: transform 250ms cubic-bezier(.2,.8,.2,1),
+                  box-shadow 250ms ease;
+      transform-origin: center;
+    }
+    .btn:hover {
+      transform: translateY(-6px) scale(1.08) rotate(-3deg);
+      box-shadow: 0 8px 16px rgba(0,0,0,.2);
+    }
+
+    /* ===== 3D Card Example ===== */
+    .card {
+      width: 320px;
+      height: 200px;
+      perspective: 1000px;
+    }
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.12);
+      transform-style: preserve-3d;
+      transition: transform 400ms ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #1e293b;
+    }
+    .card:hover .card-inner {
+      transform: rotateY(12deg) rotateX(6deg) translateZ(15px);
+    }
+
+    /* ===== Image Zoom Example ===== */
+    .image-container {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.15);
+      width: 300px;
+    }
+    .image-container img {
+      width: 100%;
+      transition: transform 300ms ease;
+      will-change: transform;
+    }
+    .image-container:hover img {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button class="btn">Hover Me</button>
+
+    <div class="card">
+      <div class="card-inner">3D Card</div>
+    </div>
+
+    <div class="image-container">
+      <img src="https://picsum.photos/400/250" alt="Random">
+    </div>
+  </div>
+
+</body>
+</html>

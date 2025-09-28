@@ -1,0 +1,183 @@
+/* 
+CSS Syntax 
+
+all css selector
+Basic Selectors
+
+* → Universal Selector
+
+h1 → Element Selector
+
+.btn → Class Selector
+
+#header → ID Selector
+
+Combinators
+
+div p → Descendant (space)
+
+div > p → Child (>)
+
+h1 + p → Adjacent Sibling (+)
+
+h1 ~ p → General Sibling (~)
+
+Attribute Selectors
+
+a[href] → Attribute Exists
+
+a[href^="https"] → Attribute Starts With
+
+a[href$=".pdf"] → Attribute Ends With
+
+a[href*="google"] → Attribute Contains
+
+Pseudo-classes (State/Position based)
+
+li:first-child → First Child
+
+li:last-child → Last Child
+
+li:nth-child(2) → 2nd Child
+
+li:not(.intro) → Not Selector
+
+a:hover → Hover
+
+li:first-of-type → First of Type
+
+li:last-of-type → Last of Type
+
+li:nth-of-type(2) → 2nd of Type
+
+li:nth-last-of-type(2) → 2nd Last of Type
+
+li:nth-last-child(2) → 2nd Last Child
+
+li:nth-child(2n) → Even elements
+
+li:nth-child(2n+1) → Odd elements
+
+Pseudo-elements
+
+li::after → After
+
+li::before → Before
+
+li::first-line → First Line
+
+li::first-letter → First Letter
+
+li::selection → Selection
+
+li::placeholder → Placeholder
+*/
+
+
+/* ---------- 1. Basic Selectors ---------- */
+* {
+    font-family: Arial; /* Apply Arial to all elements Universal selector */
+}
+    
+h1 {
+    color: red; /* h1 will be red Element selector */
+}
+    
+        
+.para {
+    background: yellow; /* Elements with class="btn" have yellow background Class selector */
+}
+    
+
+#header {
+    color: blue; /* Element with id="header" will be blue ID selector */
+}
+
+/* ---------- 2. Combinators ---------- */
+div p {
+    color: green; /* All p inside div Descendant selector */
+}
+    
+
+div>p {
+    color: aqua;
+    font-weight: bold; /* Direct child p of div Child selector */
+}
+    
+h2+p {
+    color: orange; /* First p immediately after h2 Adjacent sibling selector */
+}
+    
+h2~p {
+    text-decoration: underline; /* All p after h2 (siblings) General sibling selector */
+}
+
+/* ---------- 3. Attribute Selectors ---------- */
+a[href] {
+    color: brown; /* All a that have href Attribute exists selector */
+}
+    
+a[href^="https"] {
+    color: blue; /* href starts with https Attribute starts with selector */
+}
+    
+a[href$=".pdf"] {
+    color: red; /* href ends with .pdf Attribute ends with selector */
+}
+    
+a[href*="google"] {
+    color: purple; /* href contains 'google' Attribute contains selector */
+}
+    
+/* ---------- 4. Pseudo-classes ---------- */
+ul li:first-child {
+    color: red; /* First li */
+}
+    
+ul li:last-child {
+    color: blue; /* Last li */
+}
+    
+ul li:nth-child(2) {
+    color: green; /* Second li */
+}
+    
+ul li:not(.skip) {
+    font-style: italic; /* All li except .skip */
+}
+    
+a:hover {
+    background: yellow; /* When hover over link */
+}
+    
+ul li:nth-child(2n) {
+    background: #eee; /* Even li */
+}
+    
+ul li:nth-child(2n+1) {
+    background: #ccc; /* Odd li */
+}
+    
+/* ---------- 5. Pseudo-elements ---------- */
+.demo::before {
+    content: " Before "; /* Add before content */
+}
+    
+.demo::after {
+    content: " After "; /* Add after content */
+}
+    
+.demo::first-line {
+    color: red; /* Style first line */
+}
+    
+.demo::first-letter {
+    font-size: 30px;
+}
+    
+::selection {
+    background: yellow; /* Highlighted text selection */
+}
+input::placeholder {
+    color: rgb(56, 187, 84); /* Input placeholder color */
+}

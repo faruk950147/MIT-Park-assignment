@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Basic Selectors -->
+  <h1>Hello World (Element Selector)</h1>
+  <p class="para">I am a paragraph (Class Selector)</p>
+  <div id="header">This is Header (ID Selector)</div>
+
+  <!-- Combinators -->
+  <div>
+    <p>Direct Child P</p>
+    <span><p>Nested Child P</p></span>
+  </div>
+  <h2>Section Title</h2>
+  <p>First P after h2 (Adjacent)</p>
+  <p>Second P after h2 (General Sibling)</p>
+
+  <!-- Attribute Selectors -->
+  <p><a href="https://example.com">Secure Link</a></p>
+  <p><a href="file.pdf">Download PDF</a></p>
+  <p><a href="https://google.com">Google</a></p>
+
+  <!-- Pseudo-classes -->
+  <ul>
+    <li>First Item</li>
+    <li class="skip">Second Item (.skip class)</li>
+    <li>Third Item</li>
+    <li>Fourth Item</li>
+  </ul>
+  <p><a href="#">Hover Over Me</a></p>
+
+  <!-- Pseudo-elements -->
+  <p class="demo">This is a demo text for pseudo-elements.</p>
+  <input type="text" placeholder="Enter your name">
+</body>
+</html>

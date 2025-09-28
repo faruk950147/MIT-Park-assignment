@@ -1,0 +1,34 @@
+@media (max-width: 992px) {
+    .header .navbar .main-navbar {
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--primary-color);
+        color: var(--black);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: all 0.4s ease;
+    }
+
+    #check:checked ~ .main-navbar {
+        left: 0;
+    }
+
+    .header .navbar .main-navbar .main-menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header .navbar .main-navbar .login-join {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header .navbar .icons {
+        display: block;
+    }
+}
