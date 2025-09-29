@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Glass Navbar</title>
+  <link rel="stylesheet" href="navbar1.css">
+</head>
+<body>
+    <header id="header">
+       <div class="container">
+            <nav class="navbar">
+                <h1 class="logo">Logo</h1>
+
+                <!-- Main Menu -->
+                <div class="main-menu" id="mainMenu">
+                    <a href="#">Home</a>
+                    <a href="#">Movies</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <!-- Hamburger -->
+                <div class="hamburger" id="hamburger">
+                    <span></span> <!-- hidden middle line -->
+                </div>
+            </nav>
+       </div>
+    </header>
+
+    <div class="content">
+        <h2>Responsive Glass Navbar</h2>
+        <p>Scroll down to see the glass effect in action.</p>
+    </div>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mainMenu = document.getElementById('mainMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mainMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
