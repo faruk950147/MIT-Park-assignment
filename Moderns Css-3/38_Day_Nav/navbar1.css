@@ -159,7 +159,6 @@ header {
     align-items: center;
     background: linear-gradient(135deg, rgba(31,28,44,0.8), rgba(146,141,171,0.8));
     -webkit-backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     padding: 20px;
     gap: 15px;
