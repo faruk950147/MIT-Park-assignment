@@ -13,9 +13,10 @@
   color:#fff; 
 }
 
+/* Header Begin */
 
 /* ===================== Header ===================== */
-header {
+#header {
   width: 100%;
   position: fixed;
   top: 0;
@@ -124,6 +125,8 @@ header {
 .main-menu a:hover {
   color: #1abc9c; /* hover color */
 }
+
+/* Header End */
 
 
 /* ===================== Content ===================== */
